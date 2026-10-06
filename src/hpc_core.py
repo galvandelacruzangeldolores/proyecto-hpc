@@ -24,3 +24,19 @@ def procesar_bloque(rango):
     for x in range(inicio, fin):
         total += f(x)
     return total
+
+
+def dividir_en_bloques(n, cantidad):
+    """Parte el rango 1..n en 'cantidad' bloques casi iguales."""
+    tam = math.ceil(n / cantidad)
+    bloques = []
+    inicio = 1
+    while inicio <= n:
+        fin = min(inicio + tam, n + 1)
+        bloques.append((inicio, fin))
+        inicio = fin
+    return bloques
+
+
+def version_secuencial(n):
+    return procesar_bloque((1, n + 1))
