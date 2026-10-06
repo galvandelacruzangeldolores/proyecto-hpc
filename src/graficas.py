@@ -21,3 +21,16 @@ def grafica_tiempo(workers, tiempos):
     plt.xticks(workers)
     plt.grid(True)
     _guardar_y_mostrar("workers_vs_tiempo.png")
+
+
+def grafica_speedup(workers, speedups):
+    plt.figure()
+    plt.plot(workers, speedups, marker="o", label="Speedup real")
+    plt.plot(workers, workers, linestyle="--", label="Speedup ideal")
+    plt.xlabel("Número de workers")
+    plt.ylabel("Speedup")
+    plt.title("Workers vs. speedup")
+    plt.xticks(workers)
+    plt.legend()
+    plt.grid(True)
+    _guardar_y_mostrar("workers_vs_speedup.png")
