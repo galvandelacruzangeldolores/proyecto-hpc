@@ -13,11 +13,11 @@ pip install -r requirements.txt
 python src/benchmark.py
 
 ## Hardware usado
-- Procesador:
-- Núcleos / hilos:
-- RAM:
-- Sistema operativo:
-- Versión de Python:
+- Procesador: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+- Núcleos / hilos: 8 hilos
+- RAM: 15Gi
+- Sistema operativo: Ubuntu 24.04.5 LTS
+- Versión de Python: 3.12.3
 
 ## Resultados
 
