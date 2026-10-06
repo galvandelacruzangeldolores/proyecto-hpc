@@ -40,3 +40,17 @@ def dividir_en_bloques(n, cantidad):
 
 def version_secuencial(n):
     return procesar_bloque((1, n + 1))
+
+
+def version_paralela(n, workers):
+    bloques = dividir_en_bloques(n, workers * CHUNKS_POR_WORKER)
+    with Pool(processes=workers) as pool:
+        parciales = pool.map(procesar_bloque, bloques)
+    return sum(parciales)
+
+
+def medir(funcion, *args):
+    """Regresa (tiempo_en_segundos, resultado)."""
+    t0 = time.perf_counter()
+    resultado = funcion(*args)
+    return time.perf_counter() - t0, resultado
