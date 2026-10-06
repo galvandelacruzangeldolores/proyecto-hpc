@@ -1,9 +1,9 @@
 # Proyecto Práctico HPC: ejecución secuencial vs paralela
 
 ## Integrantes
-- Nombre 1 (@usuario-github)
-- Nombre 2 (@usuario-github)
-- Nombre 3 (@usuario-github)
+- Angel Dolores Galván de la Cruz (@galvandelacruzangeldolores)
+- Pamela (@pamela-mtz)
+- Rosa (@rosa1208)
 
 ## ¿De qué trata?
 Hicimos un programa en Python que procesa 5,000,000 de datos (x = 1 hasta N) aplicando la función f(x) = raíz(x) + x² + sin(x) + cos(x) + log(x) y suma todos los resultados. Lo hicimos de dos formas: una secuencial y una paralela con multiprocessing.Pool, que reparte el rango en bloques y se los da a los workers. Medimos el tiempo con time.perf_counter(), probamos con 1, 2 y 4 workers y cada configuración se corrió 3 veces.
