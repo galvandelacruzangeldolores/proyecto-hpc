@@ -34,3 +34,15 @@ def grafica_speedup(workers, speedups):
     plt.legend()
     plt.grid(True)
     _guardar_y_mostrar("workers_vs_speedup.png")
+
+
+def grafica_eficiencia(workers, eficiencias):
+    plt.figure()
+    plt.plot(workers, eficiencias, marker="o")
+    plt.xlabel("Número de workers")
+    plt.ylabel("Eficiencia")
+    plt.title("Workers vs. eficiencia")
+    plt.xticks(workers)
+    plt.ylim(0, 1.1)
+    plt.grid(True)
+    _guardar_y_mostrar("workers_vs_eficiencia.png")
