@@ -1,0 +1,5 @@
+workers,tiempo_promedio_s,speedup,eficiencia
+1,1.790995,1.0000,1.0000
+2,0.958301,1.8689,0.9345
+4,0.510096,3.5111,0.8778
+secuencial,1.821453,,
